@@ -13,9 +13,11 @@ class BinaryMinHeap
   end
 
   def count
+    @store.length
   end
 
   def extract
+    return @store.pop if @store.length == 1
     temp = @store[0]
     @store[0] = @store[-1]
     @store[-1] = temp
